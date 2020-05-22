@@ -24,13 +24,25 @@ public class LoginPage {
         driver.findElement(passwordField).sendKeys(password);
         return  this;
     }
+    public LoginPage loginWithInvalidCreates(String mail){
+        this.typeMail(mail);
+        driver.findElement(signInButton).click();
+        return new LoginPage(driver);
+    }
+
     public LoginPage loginWithInvalidCreates(String mail, String password){
         this.typeMail(mail);
         this.typePassword(password);
         driver.findElement(signInButton).click();
         return new LoginPage(driver);
-
     }
+
+
+    public LoginPage clickButton(){
+        driver.findElement(signInButton).click();
+        return new LoginPage(driver);
+    }
+
     public String getMailEmtyError(){
         return driver.findElement(mailFieldEmtyError).getText();
     }
