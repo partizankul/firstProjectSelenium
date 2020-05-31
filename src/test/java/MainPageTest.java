@@ -15,7 +15,7 @@ public class MainPageTest {
     @Before
     public void setUp(){
         System.setProperty("webdriver.chrome.driver",
-                "E:\\Java Projects\\kuleshovcom\\drivers\\chromedriver.exe");
+                "E:\\Java Projects\\WebDriverChrome\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
@@ -32,25 +32,25 @@ public class MainPageTest {
     }
 
     @Test
-    public void singInButtonText(){
+    public void singInButtonTextTest(){
         String buttonSingInText = mainPage.getButtonSingInText();
         Assert.assertEquals("Войти", buttonSingInText);
     }
 
     @Test
-    public void singUpButtonText(){
+    public void singUpButtonTextTest(){
         String buttonSingUpText = mainPage.getButtonSingUpText();
         Assert.assertEquals("Регистрация", buttonSingUpText);
     }
 
     @Test
-    public void singIn(){
+    public void singInTest(){
         LoginPage loginPage = mainPage.clickSingnIn();
-        Assert.assertEquals("Ещё нет учётной записи? Зарегистрируйтесь", loginPage.getTextQuestion());
+        Assert.assertEquals("Ещё нет учётной записи? Зарегистрируйтесь", loginPage.getQuestionAboutLogin());
     }
 
     @Test
-    public void singUp(){
+    public void singUpTest(){
         SignUpPage signUpPage = mainPage.clickSingUp();
         Assert.assertEquals("Присоединяйтесь к сообществу «Stack Overflow на русском». Это бесплатно и займёт не больше минуты.", signUpPage.getHeading() );
 

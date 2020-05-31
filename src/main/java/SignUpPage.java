@@ -12,8 +12,8 @@ public class SignUpPage {
     private By mailField = By.xpath("//input[@id=\"email\"]");
     private By passwordField = By.xpath("//input[@id=\"password\"]");
     private By signUpButton = By.xpath("//button[@id=\"submit-button\"]");
-    private By mailFieldEmtyError = By.xpath("//*[text()=\"Поле ввода почты не может быть пустым.\"]");
-    private By passwordFieldEmtyError = By.xpath("//*[text()=\"Поле ввода пароля не может быть пустым.\"]");
+    private By mailFieldEmptyError = By.xpath("//*[text()=\"Поле ввода почты не может быть пустым.\"]");
+    private By passwordFieldEmptyError = By.xpath("//*[text()=\"Поле ввода пароля не может быть пустым.\"]");
     private By mailFieldError = By.xpath("//*[contains(text(), 'неверный адрес почты.')]");
     private By paswordFieldError = By.xpath("//div/p[@class=\"fs-caption fc-light mt4 mb4\"]");
     private By heading = By.xpath("//*[contains(text(), \"Это бесплатно и займёт не больше минуты.\")]");
@@ -30,6 +30,7 @@ public class SignUpPage {
         driver.findElement(passwordField).sendKeys(password);
         return this;
     }
+
     public SignUpPage registerWithInvalidCreads (String usermane, String mail, String password){
         this.typeUserName(usermane);
         this.typeMail(mail);
@@ -43,11 +44,11 @@ public class SignUpPage {
         driver.findElement(signUpButton).click();
         return new SignUpPage(driver);
     }
-    public String getMailFieldEmtyErrorText (){
-        return driver.findElement(mailFieldEmtyError).getText();
+    public String getMailFieldEmptyErrorText (){
+        return driver.findElement(mailFieldEmptyError).getText();
     }
-    public String getPasswordFieldEmtyError (){
-        return driver.findElement(passwordFieldEmtyError).getText();
+    public String getPasswordFieldEmptyError (){
+        return driver.findElement(passwordFieldEmptyError).getText();
     }
     public String getMailFieldError (){
         return driver.findElement(mailFieldError).getText();
@@ -57,5 +58,8 @@ public class SignUpPage {
     }
     public String getHeading(){
         return driver.findElement(heading).getText();
+    }
+    public String getPaswordFieldErrorText(){
+       return driver.findElement(paswordFieldError).getText();
     }
 }

@@ -15,7 +15,7 @@ public class LoginPageTest {
     @Before
     public void setUp(){
         System.setProperty("webdriver.chrome.driver",
-                "E:\\Java Projects\\kuleshovcom\\drivers\\chromedriver.exe");
+                "E:\\Java Projects\\WebDriverChrome\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
@@ -24,19 +24,23 @@ public class LoginPageTest {
     }
 
     @Test
-    public void mailandPassIsEmpty(){
+    public void mailandPassIsEmptyTest(){
     loginPage.clickButton();
         Assert.assertEquals("Поле ввода почты не может быть пустым.", loginPage.getMailEmtyError());
         Assert.assertEquals("Поле ввода пароля не может быть пустым.", loginPage.getpasswordEmtyError());
     }
 
     @Test
-    public void passIsEmpty(){
+    public void passIsEmptyTest(){
         loginPage.loginWithInvalidCreates("Test@gmail.com");
         Assert.assertEquals("Поле ввода пароля не может быть пустым.", loginPage.getpasswordEmtyError());
     }
 
-
+    @Test
+    public void maitOrPasswordErrorTest(){
+        loginPage.loginWithInvalidCreates("Test@gmail.com", "Qwe1234567");
+        Assert.assertEquals("Почта или пароль заданы неверно.",loginPage.getMailOrPasswordError());
+    }
 
 
 
