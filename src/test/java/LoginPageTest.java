@@ -1,3 +1,4 @@
+import Utilites.Driver;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -9,18 +10,14 @@ import java.util.concurrent.TimeUnit;
 
 public class LoginPageTest {
 
-    private WebDriver driver;
-    private LoginPage loginPage;
+   private LoginPage loginPage;
 
     @Before
     public void setUp(){
-        System.setProperty("webdriver.chrome.driver",
-                "E:\\Java Projects\\WebDriverChrome\\chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-        driver.get("https://ru.stackoverflow.com/users/login");
-        loginPage = new LoginPage(driver);
+        Driver.Initialize();
+        Driver.Instance.get("https://ru.stackoverflow.com/users/login");
+        loginPage = new LoginPage(Driver.Instance);
+
     }
 
     @Test
@@ -46,7 +43,7 @@ public class LoginPageTest {
 
     @After
     public void tearDown(){
-        driver.quit();
+        Driver.quit();;
     }
 
 }

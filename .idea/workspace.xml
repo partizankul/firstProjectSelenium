@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ec7b29e-71dd-453c-877a-1e52d25c67d7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/drivers/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SignUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SignUpPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/LoginPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MainPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MainPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SignUpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SignUpTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LoginPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SignUpPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SignUpPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/LoginPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/LoginPageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MainPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MainPageTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainClass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/SignUpTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SignUpTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +36,11 @@
     </option>
   </component>
   <component name="ProjectId" id="1c2ssq71aBfLFdHondY0q0vKdJl" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="last_opened_file_path" value="C:/epam/Git/bin/git.exe" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -68,33 +68,40 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SignUpTest.getHeadingTest">
-    <configuration name="LoginPageTest.maitOrPasswordErrorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.LoginPageTest">
+    <configuration name="LoginPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="firstProjectSelenium" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LoginPageTest" />
-      <option name="METHOD_NAME" value="maitOrPasswordErrorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginPageTest.mailandPassIsEmptyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="firstProjectSelenium" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LoginPageTest" />
+      <option name="METHOD_NAME" value="mailandPassIsEmptyTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginPageTest.passIsEmptyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="firstProjectSelenium" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginPageTest" />
-      <option name="METHOD_NAME" value="passIsEmptyTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="MainPageTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SignUpTest.getHeadingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SignUpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="firstProjectSelenium" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SignUpTest" />
-      <option name="METHOD_NAME" value="getHeadingTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,23 +116,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SignUpTest.passEmptyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="firstProjectSelenium" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SignUpTest" />
-      <option name="METHOD_NAME" value="passEmptyTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SignUpTest.getHeadingTest" />
-        <item itemvalue="JUnit.SignUpTest.passEmptyTest" />
-        <item itemvalue="JUnit.LoginPageTest.passIsEmptyTest" />
-        <item itemvalue="JUnit.LoginPageTest.maitOrPasswordErrorTest" />
+        <item itemvalue="JUnit.LoginPageTest" />
+        <item itemvalue="JUnit.SignUpTest" />
         <item itemvalue="JUnit.SignUpTest.mailEmptyTest" />
+        <item itemvalue="JUnit.MainPageTest" />
+        <item itemvalue="JUnit.LoginPageTest.mailandPassIsEmptyTest" />
       </list>
     </recent_temporary>
   </component>
@@ -154,5 +151,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

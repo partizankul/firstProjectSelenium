@@ -1,11 +1,10 @@
+import Utilites.Driver;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.concurrent.TimeUnit;
 
 public class SignUpTest {
 
@@ -14,13 +13,9 @@ public class SignUpTest {
 
     @Before
     public void setUp(){
-        System.setProperty("webdriver.chrome.driver",
-                "E:\\Java Projects\\WebDriverChrome\\chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-        driver.get("https://ru.stackoverflow.com/users/signup?ssrc=head&returnurl=https%3a%2f%2fru.stackoverflow.com%2fusers");
-        signUpPage = new SignUpPage(driver);
+        Driver.Initialize();
+        Driver.Instance.get("https://ru.stackoverflow.com/users/signup?ssrc=head&returnurl=https%3a%2f%2fru.stackoverflow.com%2fusers");
+        signUpPage = new SignUpPage(Driver.Instance);
     }
     /*@Test
     public void mailEmptyTest(){
@@ -46,7 +41,7 @@ public class SignUpTest {
 
     @After
     public void tearDown(){
-        driver.quit();
+        Driver.quit();
     }
 
 
