@@ -13,9 +13,9 @@ public class SignUpTest {
 
     @Before
     public void setUp(){
-        Driver.Initialize();
-        Driver.Instance.get("https://ru.stackoverflow.com/users/signup?ssrc=head&returnurl=https%3a%2f%2fru.stackoverflow.com%2fusers");
-        signUpPage = new SignUpPage(Driver.Instance);
+        Driver.getDriver();
+        Driver.getDriver().get("https://ru.stackoverflow.com/users/signup?ssrc=head&returnurl=https%3a%2f%2fru.stackoverflow.com%2fusers");
+        signUpPage = new SignUpPage(Driver.getDriver());
     }
     /*@Test
     public void mailEmptyTest(){
@@ -41,7 +41,7 @@ public class SignUpTest {
 
     @After
     public void tearDown(){
-        Driver.quit();
+        Driver.getDriver().quit();
     }
 
 

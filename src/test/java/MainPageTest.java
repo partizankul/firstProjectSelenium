@@ -13,9 +13,9 @@ public class MainPageTest {
 
     @Before
     public void setUp(){
-        Driver.Initialize();
-        Driver.Instance.get("https://ru.stackoverflow.com/");
-        mainPage = new MainPage(Driver.Instance);
+        Driver.getDriver();
+        Driver.getDriver().get("https://ru.stackoverflow.com/");
+        mainPage = new MainPage(Driver.getDriver());
     }
 
     @Test
@@ -54,6 +54,6 @@ public class MainPageTest {
 
     @After
     public void tearDown(){
-        Driver.quit();
+        Driver.getDriver().quit();
     }
 }
